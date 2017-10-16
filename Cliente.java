@@ -28,6 +28,7 @@ public class Cliente {
 
 	public Cliente() {
 		dointerfaz();
+		(mensaje).requestFocus();
 	}
 	//Metodo que no hace nada, seria la interfaz del cliente
 		public void dointerfaz() {
@@ -126,6 +127,7 @@ public class Cliente {
 							public void actionPerformed(ActionEvent e) {
 							String enviar_mensaje = mensaje.getText();
 							escritor.println(enviar_mensaje);
+							area_chat.append("Ciente: "+enviar_mensaje+"\n");
 							mensaje.setText("");
 
 							}

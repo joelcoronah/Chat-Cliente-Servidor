@@ -26,7 +26,7 @@ public class Servidor {
 	public Servidor() {
 		//llamamos la interfaz
 		dointerfaz();
-		
+		(mensaje).requestFocus();
 		
 	}
 	//Metodo que no hace nada, seria la interfaz del usuario
@@ -100,7 +100,7 @@ public class Servidor {
 						 Se guarda todo lo que llegue del socket en una variable
 						 Para leerlo*/
 						String mensaje_recibido = lector.readLine();
-						area_chat.append("Cliente: "+mensaje_recibido);
+						area_chat.append("Cliente: "+mensaje_recibido+"\n");
 					}
 				} catch (Exception ex) {
 					ex.printStackTrace();
@@ -127,6 +127,8 @@ public class Servidor {
 						public void actionPerformed(ActionEvent e) {
 						String enviar_mensaje = mensaje.getText();
 						escritor.println(enviar_mensaje);
+						area_chat.append("Ciente: "+enviar_mensaje+"\n");
+
 						mensaje.setText("");
 						
 						}
